@@ -30,14 +30,14 @@ public class ExampleController : ControllerBase
         }
     }
 
-    private async Task<bool> RetrieveSourceCode(string repositoryOwner, string repositoryName)
+      private async Task<bool> RetrieveSourceCode(string repositoryOwner, string repositoryName)
+{
     {
-        {
         var github = new GitHubClient(new ProductHeaderValue("MyGitHubApiClient"));
 
-        // Authenticate with your GitHub credentials (replace with your username and token)
-        var credentials = new Credentials("mohammed-saalim", "github token");
-        github.Credentials = credentials;
+        // // Authenticate with your GitHub credentials (replace with your username and token)
+        // var credentials = new Credentials("mohammed-saalim", "github token");
+        // github.Credentials = credentials;
 
         try
         {
@@ -62,6 +62,7 @@ public class ExampleController : ControllerBase
             Console.WriteLine($"Error: {ex.Message}");
             return false; // Failure
         }
-    }
+        }
     }
 }
+
